@@ -11,7 +11,7 @@ TODO List
   - [x] Use Case Diagram
   - [x] Use Case Description
   - [ ] Updated Class Diagram
-  - [ ] Activity Diagram
+  - [x] Activity Diagram
   - [ ] Multi-Layered Sequence Diagram
 - Program :
   - [ ] Program Completion 20%
