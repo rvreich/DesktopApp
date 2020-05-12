@@ -9,7 +9,7 @@ TODO List
   - [x] Create Project
 - Analysis :
   - [x] Use Case Diagram
-  - [ ] Use Case Description
+  - [x] Use Case Description
   - [ ] Updated Class Diagram
   - [ ] Activity Diagram
   - [ ] Multi-Layered Sequence Diagram
