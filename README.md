@@ -10,7 +10,7 @@ TODO List
 - Analysis :
   - [x] Use Case Diagram
   - [x] Use Case Description
-  - [ ] Updated Class Diagram
+  - [x] Updated Class Diagram
   - [x] Activity Diagram
   - [ ] Multi-Layered Sequence Diagram
 - Program :
