@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:RV_UnderTheSeaApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <DataGrid MouseDoubleClick="click" AutoGenerateColumns="False" x:Name="dataGrid" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="225" Margin="0,40,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="100"/>
+                <DataGridTextColumn Binding="{Binding TNAME}" Header="Table Name" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Click="click" x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="254,89,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="254,44,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="254,141,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="1.016,0.495"/>
     </Grid>
 </Window>

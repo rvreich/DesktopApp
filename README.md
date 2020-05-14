@@ -21,3 +21,8 @@ TODO List
   - [ ] Program Completion 60%
   - [ ] Program Completion 80%
   - [ ] Program Completion 100%
+- Design Pattern :
+  - [x] Singleton - Database
+  - [ ] Template - Report
+  - [ ] Observer - Waiter > Dining Room
+  - [ ] State - Cooking State
