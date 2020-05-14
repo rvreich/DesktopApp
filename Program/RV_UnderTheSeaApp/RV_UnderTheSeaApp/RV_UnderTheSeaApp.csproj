@@ -73,7 +73,7 @@
     <Compile Include="AttractionWindow.xaml.cs">
       <DependentUpon>AttractionWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
