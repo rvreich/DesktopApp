@@ -1,13 +1,14 @@
 # Desktop App
 ## TPA Desktop Analysis and Program
 Program Version:
-- C# WPF
-- Visual Paradigm
+- C# WPF on Visual Studio 2017 .NET 4.6.1
+- Visual Paradigm 16.0
 
 TODO List
 - Basic :
   - [x] Create Project
 - Analysis :
+  - [x] Visual Paradigm Project Created
   - [x] Use Case Diagram
   - [x] Use Case Description
   - [x] Updated Class Diagram
