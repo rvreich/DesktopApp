@@ -24,5 +24,5 @@ TODO List
 - Design Pattern :
   - [x] Singleton - Database
   - [ ] Template - Report
-  - [ ] Observer - Waiter > Dining Room
+  - [ ] Facade - Working Flow System
   - [ ] State - Cooking State

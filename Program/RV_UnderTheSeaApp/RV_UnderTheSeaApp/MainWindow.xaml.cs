@@ -88,7 +88,30 @@ namespace RV_UnderTheSeaApp
             String content = textBox.Text.TrimEnd();
             //UpdateData(content);
             //DisplayData();
-            encode(content);
+            //encode(content);
+            demoLogin(content);
+        }
+
+        private void demoLogin(String content)
+        {
+            SqlConnection con = db.getConnection();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM TestTable WHERE ID = " + content;
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Console.WriteLine(String.Format("{0}, {1}", reader[0], reader[1]));
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Revelant ID");
+            }
+            con.Close();
         }
     }
 }
