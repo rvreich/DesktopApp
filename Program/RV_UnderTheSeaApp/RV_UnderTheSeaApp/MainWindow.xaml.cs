@@ -148,8 +148,8 @@ namespace RV_UnderTheSeaApp
 
         private void DemoStatePatter()
         {
-            Order order = new Order(new CreateOrderState());
-            order.StartOrder(); // ini dipanggil terus buat statenya
+            Order order = new Order(new CreateOrderState(), 1);
+            order.StartOrder(1); // ini dipanggil terus buat statenya
         }
     }
 }

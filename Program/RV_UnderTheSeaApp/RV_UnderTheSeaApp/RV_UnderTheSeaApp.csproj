@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\RestaurantDepartment\DiningRoomDivision\TotalFeeForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\RestaurantDepartment\KitchenDivision\KitchenRoomForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,9 @@
     </Compile>
     <Compile Include="Departments\RestaurantDepartment\DiningRoomDivision\DiningRoomForm.xaml.cs">
       <DependentUpon>DiningRoomForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\RestaurantDepartment\DiningRoomDivision\TotalFeeForm.xaml.cs">
+      <DependentUpon>TotalFeeForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Departments\RestaurantDepartment\KitchenDivision\KitchenRoomForm.xaml.cs">
       <DependentUpon>KitchenRoomForm.xaml</DependentUpon>

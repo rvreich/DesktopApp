@@ -8,10 +8,10 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.RestaurantHelper
 {
     class MadeOrderState : State
     {
-        public override void Progress()
+        public override void Progress(int ID)
         {
             Console.WriteLine("Making Order");
-            this.order.TransitionTo(new DeliverOrderState());
+            this.order.TransitionTo(new DeliverOrderState(), ID);
         }
     }
 }

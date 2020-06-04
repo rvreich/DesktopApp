@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision"
         mc:Ignorable="d"
-        Title="DiningRoomForm" Height="450" Width="800">
+        Title="DiningRoomForm" Height="350" Width="450">
     <Grid>
-        
+        <TextBox x:Name="validation_box" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Validate Ticket" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="validateButton" Content="validate" Click="ValidateButton_Click" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="orderDataGrid" HorizontalAlignment="Left" Height="189" Margin="168,10,0,0" VerticalAlignment="Top" Width="251"/>
+        <Button x:Name="checkTableButton" Content="check table" Click="CheckTableButton_Click" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="auditButton" Content="audit" Click="AuditButton_Click" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="168,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="amount_box" HorizontalAlignment="Left" Height="23" Margin="299,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="orderStatusComboBox" HorizontalAlignment="Left" Margin="168,271,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="CREATED"/>
+            <ComboBoxItem Content="COOKED"/>
+            <ComboBoxItem Content="MADE"/>
+            <ComboBoxItem Content="DELIVERED"/>
+            <ComboBoxItem Content="FINISH"/>
+        </ComboBox>
+        <TextBox x:Name="chairnum_box" HorizontalAlignment="Left" Height="23" Margin="299,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="insertOrderButton" Content="insert order" Click="InsertOrderButton_Click" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.091,0.26"/>
+        <Button x:Name="updateOrderButton" Content="update order" Click="UpdateOrderButton_Click" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label1" Content="ID" HorizontalAlignment="Left" Margin="162,209,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Amount" HorizontalAlignment="Left" Margin="293,209,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Order Status" HorizontalAlignment="Left" Margin="162,250,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Chair Number" HorizontalAlignment="Left" Margin="293,250,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.012,0.156"/>
+        <Button x:Name="showFeeButton" Content="show fee" Click="ShowFeeButton_Click" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

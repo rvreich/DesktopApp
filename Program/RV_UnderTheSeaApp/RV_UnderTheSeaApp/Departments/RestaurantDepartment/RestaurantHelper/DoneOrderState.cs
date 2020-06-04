@@ -8,7 +8,7 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.RestaurantHelper
 {
     class DoneOrderState : State
     {
-        public override void Progress()
+        public override void Progress(int ID)
         {
             Console.WriteLine("Wrapping Up Finished Order");
         }

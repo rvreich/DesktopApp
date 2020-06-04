@@ -15,6 +15,6 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.RestaurantHelper
             this.order = order;
         }
 
-        public abstract void Progress();
+        public abstract void Progress(int ID);
     }
 }
