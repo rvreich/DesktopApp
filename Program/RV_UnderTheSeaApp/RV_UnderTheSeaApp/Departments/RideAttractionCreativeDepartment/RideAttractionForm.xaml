@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment"
         mc:Ignorable="d"
-        Title="RideAttractionForm" Height="450" Width="1200"
+        Title="RideAttractionForm" Height="450" Width="1600"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="reportBox" HorizontalAlignment="Left" Height="320" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
-        <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Center" Height="330" Margin="375,0,799.6,0" VerticalAlignment="Top" Width="5"/>
+        <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Center" Height="330" Margin="380,3,1199.6,0" VerticalAlignment="Top" Width="5"/>
         <Button x:Name="reportButton" Content="send report" Click="ReportButton_Click" HorizontalAlignment="Left" Margin="150,390,0,0" VerticalAlignment="Top" Width="75"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="130,352,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem IsSelected="True" Content="Manager"/>
@@ -18,16 +18,16 @@
         <Button x:Name="logoutButton" Click="LogoutButton_Click" Content="log out" HorizontalAlignment="Left" Margin="556,390,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.224,0.62"/>
         <DataGrid x:Name="attractionDataGrid" HorizontalAlignment="Left" Height="249" Margin="405,40,0,0" VerticalAlignment="Top" Width="343"/>
         <Label x:Name="label" Content="Attraction List" HorizontalAlignment="Left" Margin="399,10,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="249" Margin="828,40,0,0" VerticalAlignment="Top" Width="343"/>
-        <Label x:Name="label1" Content="Report List" HorizontalAlignment="Left" Margin="822,10,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="249" Margin="806,40,0,0" VerticalAlignment="Top" Width="343"/>
+        <Label x:Name="label1" Content="Report List" HorizontalAlignment="Left" Margin="800,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="updateAttractionButton" Content="update capacity" Click="UpdateAttractionButton_Click" HorizontalAlignment="Left" Margin="407,352,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="405,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="capacity_box" HorizontalAlignment="Left" Height="23" Margin="540,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label2" Content="ID" HorizontalAlignment="Left" Margin="399,289,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Capacity" HorizontalAlignment="Left" Margin="534,289,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="201,369,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBox x:Name="aid_box" HorizontalAlignment="Left" Height="23" Margin="828,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.295,0.148"/>
-        <ComboBox x:Name="constructionComboBox" HorizontalAlignment="Left" Margin="981,311,0,0" VerticalAlignment="Top" Width="120">
+        <TextBox x:Name="aid_box" HorizontalAlignment="Left" Height="23" Margin="806,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.295,0.148"/>
+        <ComboBox x:Name="constructionComboBox" HorizontalAlignment="Left" Margin="959,311,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="ESTABLISH"/>
             <ComboBoxItem Content="WORKING"/>
             <ComboBoxItem Content="CONSTRUCT"/>
@@ -35,9 +35,11 @@
             <ComboBoxItem Content="REMOVE"/>
             <ComboBoxItem Content="DESTROYED"/>
         </ComboBox>
-        <Label x:Name="label4" Content="ID" HorizontalAlignment="Left" Margin="822,289,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label5" Content="Construction Status" HorizontalAlignment="Left" Margin="975,289,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="updateStatusButton" Content="update status" Click="UpdateStatusButton_Click" HorizontalAlignment="Left" Margin="828,352,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label4" Content="ID" HorizontalAlignment="Left" Margin="800,289,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Construction Status" HorizontalAlignment="Left" Margin="953,289,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateStatusButton" Content="update status" Click="UpdateStatusButton_Click" HorizontalAlignment="Left" Margin="806,352,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="confirmationDataGrid" HorizontalAlignment="Left" Height="249" Margin="1206,40,0,0" VerticalAlignment="Top" Width="304"/>
+        <Label x:Name="label6" Content="Confirmation Report" HorizontalAlignment="Left" Margin="1201,10,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

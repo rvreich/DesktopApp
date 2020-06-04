@@ -70,6 +70,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\ConstructionDepartment\ConstructionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +103,9 @@
     </Compile>
     <Compile Include="Departments\AttractionDepartment\FeeForm.xaml.cs">
       <DependentUpon>FeeForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\ConstructionDepartment\ConstructionForm.xaml.cs">
+      <DependentUpon>ConstructionForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>

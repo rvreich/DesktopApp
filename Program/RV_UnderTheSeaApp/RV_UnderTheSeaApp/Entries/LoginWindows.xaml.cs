@@ -1,4 +1,5 @@
 ﻿using RV_UnderTheSeaApp.Departments.AttractionDepartment;
+using RV_UnderTheSeaApp.Departments.ConstructionDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
 using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
 using System;
@@ -87,6 +88,9 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "CONS":
+                    ConstructionForm constructionForm = new ConstructionForm();
+                    constructionForm.Show();
+                    this.Close();
                     break;
                 case "DIRO":
                     break;

@@ -28,6 +28,7 @@ namespace RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment
             InitializeComponent();
             RefreshAttractionList();
             RefreshReportList();
+            RefreshConfirmationList();
         }
 
         private void RefreshAttractionList()
@@ -63,6 +64,24 @@ namespace RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             reportDataGrid.ItemsSource = dt.DefaultView;
+            con.Close();
+        }
+
+        private void RefreshConfirmationList()
+        {
+            SqlConnection con = db.getConnection();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT ID, REPORTDATE, CONTENT FROM GeneralReports WHERE DEPARTMENT = 'RIAC'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            confirmationDataGrid.ItemsSource = dt.DefaultView;
             con.Close();
         }
 
