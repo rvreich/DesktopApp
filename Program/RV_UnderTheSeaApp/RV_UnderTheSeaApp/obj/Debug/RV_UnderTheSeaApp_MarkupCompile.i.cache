@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\App.xaml
-2-325432553
+4-328439538
 
-11-17342254
+13-278065201
 14-1207198811
-AttractionWindow.xaml;MainWindow.xaml;
+Departments\AttractionDepartment\AttractionForm.xaml;Departments\AttractionDepartment\CodeGeneratorForm.xaml;Entries\LoginWindows.xaml;MainWindow.xaml;
 
-True
+False
 

@@ -58,7 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AttractionWindow.xaml">
+    <Page Include="Departments\AttractionDepartment\AttractionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\AttractionDepartment\CodeGeneratorForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Entries\LoginWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,10 +78,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AttractionWindow.xaml.cs">
-      <DependentUpon>AttractionWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Departments\AttractionDepartment\AttractionForm.xaml.cs">
+      <DependentUpon>AttractionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\AttractionDepartment\CodeGeneratorForm.xaml.cs">
+      <DependentUpon>CodeGeneratorForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entries\LoginWindows.xaml.cs">
+      <DependentUpon>LoginWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,5 +120,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ TODO List
   - [x] Multi-Layered Sequence Diagram
 - Program :
   - [x] Program Project Created
-  - [ ] Program Completion 20%
+  - [x] Program Completion 20%
   - [ ] Program Completion 40%
   - [ ] Program Completion 60%
   - [ ] Program Completion 80%

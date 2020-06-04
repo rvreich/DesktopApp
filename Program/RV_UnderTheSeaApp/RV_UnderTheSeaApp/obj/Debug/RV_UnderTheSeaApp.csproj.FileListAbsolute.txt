@@ -17,5 +17,9 @@ D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\Gma.QrCo
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\Gma.QrCodeNet.Encoding.pdb
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\Gma.QrCodeNet.Encoding.xml
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\RV_UnderTheSeaApp.csproj.CopyComplete
-D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\AttractionWindow.g.cs
-D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\AttractionWindow.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Entries\LoginWindows.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Entries\LoginWindows.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AttractionDepartment\AttractionForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AttractionDepartment\AttractionForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AttractionDepartment\CodeGeneratorForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AttractionDepartment\CodeGeneratorForm.baml

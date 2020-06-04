@@ -1,0 +1,18 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.LoginWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="400"
+        WindowStartupLocation="CenterScreen" Background="#FF8B8B8B" VerticalAlignment="Center">
+    <Grid HorizontalAlignment="Center">
+        <TextBox x:Name="username_box" HorizontalAlignment="Center" Height="23" Margin="66,150,73.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="password_box" HorizontalAlignment="Left" Height="23" Margin="66,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133"/>
+        <Label x:Name="label" Content="username" HorizontalAlignment="Left" Margin="62,119,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="password" HorizontalAlignment="Left" Margin="62,181,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Click="LoginClick" Content="LOGIN" HorizontalAlignment="Left" Margin="92,250,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

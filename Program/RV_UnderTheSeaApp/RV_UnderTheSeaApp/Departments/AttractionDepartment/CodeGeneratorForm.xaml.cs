@@ -12,16 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace RV_UnderTheSeaApp
+namespace RV_UnderTheSeaApp.Departments.AttractionDepartment
 {
     /// <summary>
-    /// Interaction logic for AttractionWindow.xaml
+    /// Interaction logic for CodeGeneratorForm.xaml
     /// </summary>
-    public partial class AttractionWindow : Window
+    public partial class CodeGeneratorForm : Window
     {
-        public AttractionWindow()
+        public CodeGeneratorForm(ImageSource imageSource)
         {
             InitializeComponent();
+            image.Source = imageSource;
         }
     }
 }

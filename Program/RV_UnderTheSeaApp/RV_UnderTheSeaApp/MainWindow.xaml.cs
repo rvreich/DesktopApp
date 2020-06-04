@@ -89,7 +89,20 @@ namespace RV_UnderTheSeaApp
             //UpdateData(content);
             //DisplayData();
             //encode(content);
-            demoLogin(content);
+            //demoLogin(content);
+            insertTicket();
+        }
+
+        private void insertTicket()
+        {
+            SqlConnection con = db.getConnection();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO Tickets (DATE_CREATED) VALUES(@date)";
+            cmd.Parameters.AddWithValue("@date", System.DateTime.Now);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         private void demoLogin(String content)
@@ -110,6 +123,24 @@ namespace RV_UnderTheSeaApp
             else
             {
                 MessageBox.Show("No Revelant ID");
+            }
+            con.Close();
+        }
+
+        private void validateTicket()
+        {
+            SqlConnection con = db.getConnection();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Tickets WHERE ID = 1";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                String dateCreated = reader[1].ToString();
+                System.TimeSpan daysDiff = System.DateTime.Now - Convert.ToDateTime(dateCreated);
+                int diff = (int)daysDiff.TotalDays;
+                Console.WriteLine(diff);
             }
             con.Close();
         }
