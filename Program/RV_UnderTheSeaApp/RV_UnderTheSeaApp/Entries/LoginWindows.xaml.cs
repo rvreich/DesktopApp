@@ -1,4 +1,5 @@
 ﻿using RV_UnderTheSeaApp.Departments.AttractionDepartment;
+using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -73,6 +74,9 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "MAIN":
+                    MaintenanceForm maintenanceForm = new MaintenanceForm();
+                    maintenanceForm.Show();
+                    this.Close();
                     break;
                 case "RIAC":
                     break;

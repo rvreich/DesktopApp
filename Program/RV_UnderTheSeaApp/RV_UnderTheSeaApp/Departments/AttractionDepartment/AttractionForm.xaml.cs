@@ -50,31 +50,35 @@ namespace RV_UnderTheSeaApp.Departments.AttractionDepartment
 
         private void Generate_button_Click(object sender, RoutedEventArgs e)
         {
-            int count = int.Parse(ticket_amount_box.Text.ToString().Trim());
-            if(count > 0)
+            MessageBoxResult messageBoxResult = MessageBox.Show("Confirmation", "Generate Ticket ?", MessageBoxButton.YesNo);
+            if(messageBoxResult == MessageBoxResult.Yes)
             {
-                for (int i = 0; i < count; i++)
+                int count = int.Parse(ticket_amount_box.Text.ToString().Trim());
+                if (count > 0)
                 {
-                    SqlConnection con = db.getConnection();
-                    if (con.State == ConnectionState.Closed)
+                    for (int i = 0; i < count; i++)
                     {
-                        con.Open();
+                        SqlConnection con = db.getConnection();
+                        if (con.State == ConnectionState.Closed)
+                        {
+                            con.Open();
+                        }
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT COUNT(*) From Tickets";
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        int id = 0;
+                        while (reader.Read())
+                        {
+                            id = 1 + int.Parse(reader[0].ToString().Trim());
+                        }
+                        Console.WriteLine(id);
+                        GenerateQR(id);
+                        insertTicketData();
                     }
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "SELECT COUNT(*) From Tickets";
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    int id = 0;
-                    while (reader.Read())
-                    {
-                        id = 1 + int.Parse(reader[0].ToString().Trim());
-                    }
-                    Console.WriteLine(id);
-                    GenerateQR(id);
-                    insertTicketData();
+                    FeeForm feeForm = new FeeForm(count);
+                    feeForm.Show();
                 }
-                FeeForm feeForm = new FeeForm(count);
-                feeForm.Show();
             }
         }
 

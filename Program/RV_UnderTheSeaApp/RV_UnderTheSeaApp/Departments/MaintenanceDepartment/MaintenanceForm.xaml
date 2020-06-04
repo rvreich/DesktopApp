@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.MaintenanceDepartment"
         mc:Ignorable="d"
-        Title="MaintenanceForm" Height="450" Width="800">
+        Title="MaintenanceForm" Height="275" Width="1000"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="547,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.445,2.017"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="223" Margin="12,10,0,0" VerticalAlignment="Top" Width="517"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="547,81,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="MAINTAINED"/>
+            <ComboBoxItem Content="BROKEN"/>
+            <ComboBoxItem Content="FIXING"/>
+        </ComboBox>
+        <Label x:Name="label" Content="Maintenance Status" HorizontalAlignment="Left" Margin="543,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="547,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1" Content="Attraction Id" HorizontalAlignment="Left" Margin="543,128,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateAttractionButton" Content="update" Click="UpdateAttractionButton_Click" HorizontalAlignment="Left" Margin="547,214,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="report_box" HorizontalAlignment="Left" Height="165" Margin="744,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <Label x:Name="label2" Content="Report" HorizontalAlignment="Left" Margin="740,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="reportButton" Content="send report" Click="ReportButton_Click" HorizontalAlignment="Left" Margin="744,214,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.701,0.521"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="909,214,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
