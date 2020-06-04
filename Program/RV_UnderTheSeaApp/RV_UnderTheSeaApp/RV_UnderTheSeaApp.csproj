@@ -58,6 +58,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Departments\AccountingFinanceDepartment\AccountingFinanceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\AttractionDepartment\AttractionForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -75,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\PurchasingDepartment\PurchasingForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,6 +115,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Departments\AccountingFinanceDepartment\AccountingFinanceForm.xaml.cs">
+      <DependentUpon>AccountingFinanceForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Departments\AttractionDepartment\AttractionForm.xaml.cs">
       <DependentUpon>AttractionForm.xaml</DependentUpon>
     </Compile>
@@ -121,6 +132,9 @@
     </Compile>
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\PurchasingDepartment\PurchasingForm.xaml.cs">
+      <DependentUpon>PurchasingForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Departments\RestaurantDepartment\DiningRoomDivision\DiningRoomForm.xaml.cs">
       <DependentUpon>DiningRoomForm.xaml</DependentUpon>

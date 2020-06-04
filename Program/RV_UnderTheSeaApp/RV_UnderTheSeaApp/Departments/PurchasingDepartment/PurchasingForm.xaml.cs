@@ -14,23 +14,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision
+namespace RV_UnderTheSeaApp.Departments.PurchasingDepartment
 {
     /// <summary>
-    /// Interaction logic for KitchenRoomForm.xaml
+    /// Interaction logic for PurchasingForm.xaml
     /// </summary>
-    public partial class KitchenRoomForm : Window
+    public partial class PurchasingForm : Window
     {
         private DatabaseConnection db = DatabaseConnection.Instance;
 
-        public KitchenRoomForm()
+        public PurchasingForm()
         {
             InitializeComponent();
-            RefreshOrderData();
-            RefreshReportData();
+            RefreshRequestData();
         }
 
-        private void RefreshOrderData()
+        private void RefreshRequestData()
         {
             SqlConnection con = db.getConnection();
             if (con.State == ConnectionState.Closed)
@@ -39,38 +38,21 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ID, AMOUNT, ORDERSTATUS, CHAIRNUM FROM OrderScripts WHERE ISPAY = 0";
+            cmd.CommandText = "SELECT * FROM ConfirmationReports WHERE RECEIVER = 'PURC'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            orderDataGrid.ItemsSource = dt.DefaultView;
-        }
-
-        private void RefreshReportData()
-        {
-            SqlConnection con = db.getConnection();
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ID, REPORTDATE, CONTENT FROM GeneralReports WHERE DEPARTMENT = 'KITC'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            reportDataGrid.ItemsSource = dt.DefaultView;
+            requestDataGrid.ItemsSource = dt.DefaultView;
             con.Close();
         }
 
-        private void RequestButton_Click(object sender, RoutedEventArgs e)
+        private void ReportButton_Click(object sender, RoutedEventArgs e)
         {
-            String content = request_box.Text.ToString();
+            String content = report_box.Text.ToString();
             if(content == "")
             {
-                MessageBox.Show("Please fill out the request report!!");
+                MessageBox.Show("Please fill out the report!!");
             }
             else
             {
@@ -81,17 +63,15 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO ConfirmationReports (REPORTDATE, DEPARTMENT, CONTENT, APPROVED, RECEIVER) VALUES (@reda, @dept, @cont, @appr, @rece)";
+                cmd.CommandText = "INSERT INTO GeneralReports (REPORTDATE, DEPARTMENT, CONTENT) VALUES(@reda, @dept, @cont)";
                 cmd.Parameters.AddWithValue("@reda", System.DateTime.Now);
-                cmd.Parameters.AddWithValue("@dept", "KITC");
+                cmd.Parameters.AddWithValue("@dept", "PURC");
                 cmd.Parameters.AddWithValue("@cont", content);
-                cmd.Parameters.AddWithValue("@appr", 0);
-                cmd.Parameters.AddWithValue("@rece", "PURC");
                 cmd.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("Request has been sent!!");
+                MessageBox.Show("Purchasing report sent!!");
             }
-            request_box.Text = "";
+            report_box.Text = "";
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
@@ -104,13 +84,15 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             String id = id_box.Text.ToString();
-            String status = orderStatusComboBox.SelectionBoxItem.ToString();
-            if(id == "" || status == "")
+            String confirmation = confirmationComboBox.SelectionBoxItem.ToString();
+            int conf = -1;
+            if (id == "" || confirmation == "")
             {
-                MessageBox.Show("Please fill out ID/Status section!!");
+                MessageBox.Show("Please fill out ID / Confirmation section");
             }
             else
             {
+                conf = (confirmation == "Approved") ? 1 : 0;
                 SqlConnection con = db.getConnection();
                 if (con.State == ConnectionState.Closed)
                 {
@@ -118,13 +100,11 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE OrderScripts SET ORDERSTATUS = '" + status + "' WHERE ID = " + id;
-                cmd.ExecuteNonQuery();
+                cmd.CommandText = "UPDATE ConfirmationReports SET APPROVED = " + conf + " WHERE ID = " + id;
                 con.Close();
-                MessageBox.Show("Order has been updated!!");
-                RefreshOrderData();
             }
             id_box.Text = "";
+            RefreshRequestData();
         }
     }
 }

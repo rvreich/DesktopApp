@@ -18,8 +18,6 @@
         <TextBox x:Name="amount_box" HorizontalAlignment="Left" Height="23" Margin="299,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="orderStatusComboBox" HorizontalAlignment="Left" Margin="168,271,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="CREATED"/>
-            <ComboBoxItem Content="COOKED"/>
-            <ComboBoxItem Content="MADE"/>
             <ComboBoxItem Content="DELIVERED"/>
             <ComboBoxItem Content="FINISH"/>
         </ComboBox>

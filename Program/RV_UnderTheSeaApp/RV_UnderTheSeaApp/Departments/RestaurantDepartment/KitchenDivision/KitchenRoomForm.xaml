@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision"
         mc:Ignorable="d"
-        Title="KitchenRoomForm" Height="450" Width="800">
+        Title="KitchenRoomForm" Height="350" Width="800">
     <Grid>
-        
+        <TextBox x:Name="request_box" HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230"/>
+        <Button x:Name="requestButton" Content="send request" Click="RequestButton_Click" HorizontalAlignment="Left" Margin="82,291,0,0" VerticalAlignment="Top" Width="78"/>
+        <DataGrid x:Name="orderDataGrid" HorizontalAlignment="Left" Height="190" Margin="260,10,0,0" VerticalAlignment="Top" Width="251"/>
+        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="269" Margin="533,10,0,0" VerticalAlignment="Top" Width="251"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="342,292,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="260,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="orderStatusComboBox" HorizontalAlignment="Left" Margin="260,257,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="COOKED"/>
+            <ComboBoxItem Content="MADE"/>
+        </ComboBox>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="254,198,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Order Status" HorizontalAlignment="Left" Margin="254,237,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateButton" Content="update order" Click="UpdateButton_Click" HorizontalAlignment="Left" Margin="400,257,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+
     </Grid>
 </Window>

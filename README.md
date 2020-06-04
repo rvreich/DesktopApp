@@ -17,8 +17,8 @@ TODO List
 - Program :
   - [x] Program Project Created
   - [x] Program Completion 20%
-  - [ ] Program Completion 40%
-  - [ ] Program Completion 60%
+  - [x] Program Completion 40%
+  - [x] Program Completion 60%
   - [ ] Program Completion 80%
   - [ ] Program Completion 100%
 - Design Pattern :

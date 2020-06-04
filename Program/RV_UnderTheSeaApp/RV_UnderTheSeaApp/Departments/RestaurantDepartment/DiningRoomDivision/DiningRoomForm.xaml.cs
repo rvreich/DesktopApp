@@ -213,24 +213,17 @@ namespace RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision
             }
             else
             {
-                if(status == "COOKED" || status == "MADE")
+                SqlConnection con = db.getConnection();
+                if (con.State == ConnectionState.Closed)
                 {
-                    MessageBox.Show("Only chef can change the corresponding status!!");
+                    con.Open();
                 }
-                else
-                {
-                    SqlConnection con = db.getConnection();
-                    if (con.State == ConnectionState.Closed)
-                    {
-                        con.Open();
-                    }
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "UPDATE OrderScripts SET ORDERSTATUS = '" + status + "' WHERE ID = " + id + " AND ISPAY = 0";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Order has been updated!!");
-                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE OrderScripts SET ORDERSTATUS = '" + status + "' WHERE ID = " + id + " AND ISPAY = 0";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Order has been updated!!");
             }
             RefreshOrderData();
             amount_box.Text = "";

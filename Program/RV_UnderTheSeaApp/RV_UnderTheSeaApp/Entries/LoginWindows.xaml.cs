@@ -1,6 +1,8 @@
-﻿using RV_UnderTheSeaApp.Departments.AttractionDepartment;
+﻿using RV_UnderTheSeaApp.Departments.AccountingFinanceDepartment;
+using RV_UnderTheSeaApp.Departments.AttractionDepartment;
 using RV_UnderTheSeaApp.Departments.ConstructionDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
+using RV_UnderTheSeaApp.Departments.PurchasingDepartment;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision;
 using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
@@ -104,8 +106,14 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "PURC":
+                    PurchasingForm purchasingForm = new PurchasingForm();
+                    purchasingForm.Show();
+                    this.Close();
                     break;
                 case "ACFI":
+                    AccountingFinanceForm accountingFinanceForm = new AccountingFinanceForm();
+                    accountingFinanceForm.Show();
+                    this.Close();
                     break;
                 case "FROF":
                     break;
