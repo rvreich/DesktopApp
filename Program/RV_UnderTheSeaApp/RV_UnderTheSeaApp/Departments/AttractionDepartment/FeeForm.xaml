@@ -1,0 +1,16 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.Departments.AttractionDepartment.FeeForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.AttractionDepartment"
+        mc:Ignorable="d"
+        Title="FeeForm" Height="200" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label" Content="Total: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="total_price_label" Content="Label" HorizontalAlignment="Left" Margin="0,84,-0.4,0" VerticalAlignment="Top" FontSize="36" Width="394"/>
+        <Label x:Name="amount_label" Content="30" HorizontalAlignment="Left" Margin="109,0,-0.4,0" VerticalAlignment="Top" FontSize="36" Width="285"/>
+
+    </Grid>
+</Window>

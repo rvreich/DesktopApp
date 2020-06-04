@@ -66,6 +66,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\AttractionDepartment\FeeForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Entries\LoginWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +92,12 @@
     </Compile>
     <Compile Include="Departments\AttractionDepartment\CodeGeneratorForm.xaml.cs">
       <DependentUpon>CodeGeneratorForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\AttractionDepartment\FeeForm.xaml.cs">
+      <DependentUpon>FeeForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
+      <DependentUpon>MaintenanceForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entries\LoginWindows.xaml.cs">
       <DependentUpon>LoginWindows.xaml</DependentUpon>

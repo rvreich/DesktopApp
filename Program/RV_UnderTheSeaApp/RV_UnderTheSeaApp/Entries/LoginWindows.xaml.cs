@@ -33,9 +33,13 @@ namespace RV_UnderTheSeaApp
         {
             String username = username_box.Text.ToString().Trim();
             String password = password_box.Text.ToString().Trim();
+            String position = "";
 
             SqlConnection con = db.getConnection();
-            con.Open();
+            if(con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * FROM Workers WHERE WORKERUSERNAME = '" + username + "' AND WORKERPASSWORD = '" + password + "'";
@@ -44,7 +48,7 @@ namespace RV_UnderTheSeaApp
             {
                 while (reader.Read())
                 {
-                    switchForm(reader[7].ToString());
+                    position = reader[7].ToString();
                 }
             }
             else
@@ -52,10 +56,15 @@ namespace RV_UnderTheSeaApp
                 MessageBox.Show("Incorrect Username / Password");
             }
             con.Close();
+            if (position.CompareTo("") != 0)
+            {
+                switchForm(position);
+            }
         }
 
         private void switchForm(String position)
         {
+            SqlConnection con = db.getConnection();
             switch (position)
             {
                 case "ATTR":

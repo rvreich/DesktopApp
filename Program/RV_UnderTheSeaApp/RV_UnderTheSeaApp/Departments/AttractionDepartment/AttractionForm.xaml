@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.AttractionDepartment"
         mc:Ignorable="d"
-        Title="AttractionForm" Height="450" Width="800"
+        Title="AttractionForm" Height="300" Width="400"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="button" Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="347,191,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="validate_btn" Click="Validate_btn_Click" Content="validate" HorizontalAlignment="Left" Margin="40,213,0,0" VerticalAlignment="Top" Width="75"/>
+        <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Left" Height="66" Margin="191,166,0,0" VerticalAlignment="Top" Width="5"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="130" Margin="40,10,0,0" VerticalAlignment="Top" Width="178"/>
+        <TextBox x:Name="validation_box" HorizontalAlignment="Left" Height="23" Margin="40,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ticket_amount_box" HorizontalAlignment="Left" Height="23" Margin="231,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="generate_button" Click="Generate_button_Click" Content="generate" HorizontalAlignment="Left" Margin="231,213,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="logout_button" Click="Logout_button_Click" Content="logout" HorizontalAlignment="Left" Margin="231,121,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="generate_report" Click="Generate_report_Click" Content="audit" HorizontalAlignment="Left" Margin="231,85,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

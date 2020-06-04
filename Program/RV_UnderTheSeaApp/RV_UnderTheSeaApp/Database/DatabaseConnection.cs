@@ -14,7 +14,7 @@ namespace RV_UnderTheSeaApp
         private SqlConnection CON;
         private DatabaseConnection()
         {
-            CON = new SqlConnection(@"Data Source = DESKTOP-99AAD7R\REICHSQL; Initial Catalog = UnderTheSeaDB; Integrated Security = True");
+            CON = new SqlConnection(@"Data Source = DESKTOP-99AAD7R\REICHSQL; Initial Catalog = UnderTheSeaDB; Integrated Security = True; MultipleActiveResultSets = True");
         }
 
         public static DatabaseConnection Instance
