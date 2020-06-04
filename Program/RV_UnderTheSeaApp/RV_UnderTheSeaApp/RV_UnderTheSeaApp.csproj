@@ -78,6 +78,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\RestaurantDepartment\DiningRoomDivision\DiningRoomForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\RestaurantDepartment\KitchenDivision\KitchenRoomForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +118,19 @@
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Departments\RestaurantDepartment\DiningRoomDivision\DiningRoomForm.xaml.cs">
+      <DependentUpon>DiningRoomForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\RestaurantDepartment\KitchenDivision\KitchenRoomForm.xaml.cs">
+      <DependentUpon>KitchenRoomForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\CookOrderState.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\CreateOrderState.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\DeliverOrderState.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\DoneOrderState.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\MadeOrderState.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\Order.cs" />
+    <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\State.cs" />
     <Compile Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml.cs">
       <DependentUpon>RideAttractionForm.xaml</DependentUpon>
     </Compile>

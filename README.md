@@ -23,6 +23,6 @@ TODO List
   - [ ] Program Completion 100%
 - Design Pattern :
   - [x] Singleton - Database
-  - [ ] Template - Report
-  - [ ] Facade - Working Flow System
-  - [ ] State - Cooking State
+  - [x] Template - Report
+  - [x] Facade - Working Flow System
+  - [x] State - Cooking State

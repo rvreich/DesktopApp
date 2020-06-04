@@ -1,6 +1,8 @@
 ﻿using RV_UnderTheSeaApp.Departments.AttractionDepartment;
 using RV_UnderTheSeaApp.Departments.ConstructionDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
+using RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision;
+using RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision;
 using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
 using System;
 using System.Collections.Generic;
@@ -26,7 +28,6 @@ namespace RV_UnderTheSeaApp
     public partial class LoginWindows : Window
     {
         private DatabaseConnection db = DatabaseConnection.Instance;
-
         public LoginWindows()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace RV_UnderTheSeaApp
             String position = "";
 
             SqlConnection con = db.getConnection();
-            if(con.State == ConnectionState.Closed)
+            if (con.State == ConnectionState.Closed)
             {
                 con.Open();
             }
@@ -93,8 +94,14 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "DIRO":
+                    DiningRoomForm diningRoomForm = new DiningRoomForm();
+                    diningRoomForm.Show();
+                    this.Close();
                     break;
                 case "KITC":
+                    KitchenRoomForm kitchenRoomForm = new KitchenRoomForm();
+                    kitchenRoomForm.Show();
+                    this.Close();
                     break;
                 case "PURC":
                     break;

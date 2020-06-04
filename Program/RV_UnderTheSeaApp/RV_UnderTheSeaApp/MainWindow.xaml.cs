@@ -16,6 +16,7 @@ using System.Data.SqlClient;
 using System.Data;
 using Gma.QrCodeNet.Encoding;
 using Gma.QrCodeNet.Encoding.Windows.Render;
+using RV_UnderTheSeaApp.Departments.RestaurantDepartment.RestaurantHelper;
 
 namespace RV_UnderTheSeaApp
 {
@@ -143,6 +144,12 @@ namespace RV_UnderTheSeaApp
                 Console.WriteLine(diff);
             }
             con.Close();
+        }
+
+        private void DemoStatePatter()
+        {
+            Order order = new Order(new CreateOrderState());
+            order.StartOrder(); // ini dipanggil terus buat statenya
         }
     }
 }
