@@ -27,3 +27,5 @@ D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departme
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AttractionDepartment\FeeForm.baml
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\MaintenanceDepartment\MaintenanceForm.g.cs
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\MaintenanceDepartment\MaintenanceForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\RideAttractionCreativeDepartment\RideAttractionForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\RideAttractionCreativeDepartment\RideAttractionForm.baml

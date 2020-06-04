@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Entries\LoginWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml.cs">
+      <DependentUpon>RideAttractionForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entries\LoginWindows.xaml.cs">
       <DependentUpon>LoginWindows.xaml</DependentUpon>

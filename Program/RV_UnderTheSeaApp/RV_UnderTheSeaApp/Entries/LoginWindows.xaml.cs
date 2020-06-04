@@ -1,5 +1,6 @@
 ﻿using RV_UnderTheSeaApp.Departments.AttractionDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
+using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -55,6 +56,8 @@ namespace RV_UnderTheSeaApp
             else
             {
                 MessageBox.Show("Incorrect Username / Password");
+                username_box.Text = "";
+                password_box.Text = "";
             }
             con.Close();
             if (position.CompareTo("") != 0)
@@ -79,6 +82,9 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "RIAC":
+                    RideAttractionForm rideAttractionForm = new RideAttractionForm();
+                    rideAttractionForm.Show();
+                    this.Close();
                     break;
                 case "CONS":
                     break;

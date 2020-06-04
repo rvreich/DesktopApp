@@ -38,7 +38,7 @@ namespace RV_UnderTheSeaApp.Departments.MaintenanceDepartment
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ID,ATTRACTIONNAME,LASTMAINTENANCE,UPMAINTENANCE,ATTRACTIONSTATUS FROM Attractions";
+            cmd.CommandText = "SELECT ID,ATTRACTIONNAME,LASTMAINTENANCE,UPMAINTENANCE,ATTRACTIONSTATUS FROM Attractions WHERE ISACTIVE = 1 AND CONSTRUCTIONSTATUS = 'ESTABLISH'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -68,6 +68,7 @@ namespace RV_UnderTheSeaApp.Departments.MaintenanceDepartment
                 RefreshAttractionData();
                 con.Close();
                 MessageBox.Show("Attraction maintenance date updated!!");
+                id_box.Text = "";
             }
             else
             {
@@ -95,16 +96,15 @@ namespace RV_UnderTheSeaApp.Departments.MaintenanceDepartment
             if(content != "")
             {
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO Reports (DEPARTMENT, CONTENT, CONFIRMATION, APPROVED, REPORTDATE) VALUES(@dept, @cont, @conf, @appr, @reda)";
+                cmd.CommandText = "INSERT INTO GeneralReports (REPORTDATE, DEPARTMENT, CONTENT) VALUES(@reda, @dept, @cont)";
+                cmd.Parameters.AddWithValue("@reda", System.DateTime.Now);
                 cmd.Parameters.AddWithValue("@dept", "MAIN");
                 cmd.Parameters.AddWithValue("@cont", content);
-                cmd.Parameters.AddWithValue("@conf", 0);
-                cmd.Parameters.AddWithValue("@appr", 0);
-                cmd.Parameters.AddWithValue("@reda", System.DateTime.Now);
                 cmd.ExecuteNonQuery();
                 RefreshAttractionData();
                 con.Close();
                 MessageBox.Show("Maintenance report sent!!");
+                report_box.Text = "";
             }
             else
             {

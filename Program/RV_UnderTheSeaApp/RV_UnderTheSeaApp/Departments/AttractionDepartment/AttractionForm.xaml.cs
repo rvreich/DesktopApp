@@ -40,7 +40,7 @@ namespace RV_UnderTheSeaApp.Departments.AttractionDepartment
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ID, WORKERNAME FROM Workers WHERE WORKERPOSITION = 'ATTR'";
+            cmd.CommandText = "SELECT ID, WORKERNAME FROM Workers WHERE WORKERPOSITION = 'ATTR' AND ACTIVEWORKER = 1";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -80,6 +80,7 @@ namespace RV_UnderTheSeaApp.Departments.AttractionDepartment
                     feeForm.Show();
                 }
             }
+            ticket_amount_box.Text = "";
         }
 
         private void GenerateQR(int id)
@@ -154,6 +155,7 @@ namespace RV_UnderTheSeaApp.Departments.AttractionDepartment
             {
                 MessageBox.Show("Ticket Invalid, please buy another ticket");
             }
+            validation_box.Text = "";
             con.Close();
         }
 
