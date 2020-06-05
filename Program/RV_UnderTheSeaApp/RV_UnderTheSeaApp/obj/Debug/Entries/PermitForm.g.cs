@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using RV_UnderTheSeaApp.Departments.Manager;
 using RV_UnderTheSeaApp.Entries;
 using System;
 using System.Diagnostics;

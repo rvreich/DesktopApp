@@ -55,3 +55,9 @@ D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departme
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Entries\PermitForm.g.cs
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\Manager\ManagerForm.baml
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Entries\PermitForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.dll
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.Wpf.dll
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.pdb
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.xml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.Wpf.pdb
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\bin\Debug\LiveCharts.Wpf.xml
