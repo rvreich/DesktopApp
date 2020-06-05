@@ -1,0 +1,13 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision.HotelFeedbacksForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision"
+        mc:Ignorable="d"
+        Title="HotelFeedbacksForm" Height="450" Width="400">
+    <Grid>
+        <TextBox x:Name="feedback_box" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="374" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <Button x:Name="sendButton" Content="send feedback"  Click="SendButton_Click" HorizontalAlignment="Left" Margin="162,391,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.627,0.448"/>
+    </Grid>
+</Window>

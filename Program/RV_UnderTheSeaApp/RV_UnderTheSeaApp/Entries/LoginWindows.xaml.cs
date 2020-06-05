@@ -1,11 +1,14 @@
 ﻿using RV_UnderTheSeaApp.Departments.AccountingFinanceDepartment;
 using RV_UnderTheSeaApp.Departments.AttractionDepartment;
 using RV_UnderTheSeaApp.Departments.ConstructionDepartment;
+using RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision;
+using RV_UnderTheSeaApp.Departments.HotelDepartment.HouseKeepingDivision;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
 using RV_UnderTheSeaApp.Departments.PurchasingDepartment;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision;
 using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
+using RV_UnderTheSeaApp.Departments.SalesMarketingDepartment;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -116,10 +119,19 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "FROF":
+                    FrontOfficeForm frontOfficeForm = new FrontOfficeForm();
+                    frontOfficeForm.Show();
+                    this.Close();
                     break;
                 case "HOKE":
+                    HouseKeepingForm houseKeepingForm = new HouseKeepingForm();
+                    houseKeepingForm.Show();
+                    this.Close();
                     break;
                 case "SAMA":
+                    SalesMarketingForm salesMarketingForm = new SalesMarketingForm();
+                    salesMarketingForm.Show();
+                    this.Close();
                     break;
                 case "HURD":
                     break;

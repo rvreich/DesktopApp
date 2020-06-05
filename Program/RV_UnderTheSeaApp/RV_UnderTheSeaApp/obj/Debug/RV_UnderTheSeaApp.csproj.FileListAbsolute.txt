@@ -39,3 +39,9 @@ D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departme
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\RestaurantDepartment\DiningRoomDivision\TotalFeeForm.baml
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\PurchasingDepartment\PurchasingForm.g.cs
 D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\PurchasingDepartment\PurchasingForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AccountingFinanceDepartment\AccountingFinanceForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\AccountingFinanceDepartment\AccountingFinanceForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\HotelDepartment\FrontOfficeDivision\FrontOfficeForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\HotelDepartment\FrontOfficeDivision\FrontOfficeForm.baml
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\HotelDepartment\FrontOfficeDivision\HotelFeedbacksForm.g.cs
+D:\TPA Desktop RV\Program\RV_UnderTheSeaApp\RV_UnderTheSeaApp\obj\Debug\Departments\HotelDepartment\FrontOfficeDivision\HotelFeedbacksForm.baml

@@ -1,0 +1,16 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.Departments.HotelDepartment.HouseKeepingDivision.HouseKeepingForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.HotelDepartment.HouseKeepingDivision"
+        mc:Ignorable="d"
+        Title="HouseKeepingForm" Height="450" Width="875">
+    <Grid>
+        <TextBox x:Name="report_box" HorizontalAlignment="Left" Height="350" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="309" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <Button x:Name="sendReportButton" Content="send report" Click="SendReportButton_Click" HorizontalAlignment="Left" Margin="121,381,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="400,381,0,0" VerticalAlignment="Top" Width="80"/>
+        <DataGrid x:Name="reservationDataGrid" HorizontalAlignment="Left" Height="350" Margin="341,10,0,0" VerticalAlignment="Top" Width="510"/>
+        <Button x:Name="refreshDataButton" Content="refresh data" Click="RefreshDataButton_Click" HorizontalAlignment="Left" Margin="561,381,0,0" VerticalAlignment="Top" Width="79"/>
+    </Grid>
+</Window>

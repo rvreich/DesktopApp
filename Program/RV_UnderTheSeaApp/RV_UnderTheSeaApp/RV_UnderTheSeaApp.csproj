@@ -78,6 +78,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\HotelDepartment\FrontOfficeDivision\FrontOfficeForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\HotelDepartment\FrontOfficeDivision\HotelFeedbacksForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\HotelDepartment\HouseKeepingDivision\HouseKeepingForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\SalesMarketingDepartment\SalesMarketingForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +146,15 @@
     <Compile Include="Departments\ConstructionDepartment\ConstructionForm.xaml.cs">
       <DependentUpon>ConstructionForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Departments\HotelDepartment\FrontOfficeDivision\FrontOfficeForm.xaml.cs">
+      <DependentUpon>FrontOfficeForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\HotelDepartment\FrontOfficeDivision\HotelFeedbacksForm.xaml.cs">
+      <DependentUpon>HotelFeedbacksForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\HotelDepartment\HouseKeepingDivision\HouseKeepingForm.xaml.cs">
+      <DependentUpon>HouseKeepingForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>
     </Compile>
@@ -154,6 +179,9 @@
     <Compile Include="Departments\RestaurantDepartment\RestaurantHelper\State.cs" />
     <Compile Include="Departments\RideAttractionCreativeDepartment\RideAttractionForm.xaml.cs">
       <DependentUpon>RideAttractionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\SalesMarketingDepartment\SalesMarketingForm.xaml.cs">
+      <DependentUpon>SalesMarketingForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entries\LoginWindows.xaml.cs">
       <DependentUpon>LoginWindows.xaml</DependentUpon>

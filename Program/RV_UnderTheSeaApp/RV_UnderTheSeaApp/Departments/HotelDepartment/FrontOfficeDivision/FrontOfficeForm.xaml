@@ -1,0 +1,42 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision.FrontOfficeForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision"
+        mc:Ignorable="d"
+        Title="FrontOfficeForm" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="361,441,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.496,1.073"/>
+        <DataGrid x:Name="visitorDataGrid" HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="228"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="10,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="5,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="name_box" HorizontalAlignment="Left" Height="23" Margin="10,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1" Content="Name" HorizontalAlignment="Left" Margin="5,289,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="email_box" HorizontalAlignment="Left" Height="23" Margin="10,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label2" Content="Email" HorizontalAlignment="Left" Margin="5,338,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="verifyButton" Content="verify visitor" Click="VerifyButton_Click" HorizontalAlignment="Left" Margin="148,266,0,0" VerticalAlignment="Top" Width="90" Height="23"/>
+        <Button x:Name="insertVisitorButton" Content="insert data" Click="InsertVisitorButton_Click" HorizontalAlignment="Left" Margin="148,315,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.64,0.431" Height="23"/>
+        <Button x:Name="updateVisitor" Content="update data" Click="UpdateVisitor_Click" HorizontalAlignment="Left" Margin="148,363,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.156,0.708" Height="23"/>
+        <DataGrid x:Name="reservationDataGrid" HorizontalAlignment="Left" Height="230" Margin="261,10,0,0" VerticalAlignment="Top" Width="510"/>
+        <TextBox x:Name="visitor_id_box" HorizontalAlignment="Left" Height="23" Margin="261,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label3" Content="Visitor ID" HorizontalAlignment="Left" Margin="256,240,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="checkInDatePicker" HorizontalAlignment="Left" Margin="402,265,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="checkOutDatePicker" HorizontalAlignment="Left" Margin="540,266,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="roomnum_box" HorizontalAlignment="Left" Height="23" Margin="261,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label4" Content="Room Number" HorizontalAlignment="Left" Margin="256,291,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Check In" HorizontalAlignment="Left" Margin="395,240,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Check Out" HorizontalAlignment="Left" Margin="534,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="damagefee_box" HorizontalAlignment="Left" Height="23" Margin="659,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label7" Content="Damage Fee" HorizontalAlignment="Left" Margin="654,240,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="resid_box" HorizontalAlignment="Left" Height="23" Margin="261,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label8" Content="Reservation ID" HorizontalAlignment="Left" Margin="256,340,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="reserveButton" Content="reserve room" Click="ReserveButton_Click" HorizontalAlignment="Left" Margin="659,302,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateReservationButton" Content="update check" Click="UpdateReservationButton_Click" HorizontalAlignment="Left" Margin="659,338,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateDamageFeeButton" Content="update fee" Click="UpdateDamageFeeButton_Click" HorizontalAlignment="Left" Margin="659,371,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="showFeedbackButton" Content="feedback" Click="ShowFeedbackButton_Click" HorizontalAlignment="Left" Margin="659,404,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="auditButton" Content="audit" Click="AuditButton_Click" HorizontalAlignment="Left" Margin="659,437,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

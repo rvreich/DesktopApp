@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.AccountingFinanceDepartment"
         mc:Ignorable="d"
-        Title="AccountingFinanceForm" Height="450" Width="800">
+        Title="AccountingFinanceForm" Height="450" Width="675"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <TextBox x:Name="response_box" HorizontalAlignment="Left" Height="311" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <ComboBox x:Name="departmentComboBox" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Attraction"/>
+            <ComboBoxItem Content="Maintenance"/>
+            <ComboBoxItem Content="Ride Attraction"/>
+            <ComboBoxItem Content="Construction"/>
+            <ComboBoxItem Content="Dining Room"/>
+            <ComboBoxItem Content="Kitchen"/>
+            <ComboBoxItem Content="Purchasing"/>
+            <ComboBoxItem Content="Front Office"/>
+            <ComboBoxItem Content="House Keeping"/>
+            <ComboBoxItem Content="Sales Marketing"/>
+            <ComboBoxItem Content="Human Resource"/>
+            <ComboBoxItem Content="Manager"/>
+        </ComboBox>
+        <Button x:Name="sendResponseButton" Content="send response" Click="SendResponseButton_Click" HorizontalAlignment="Left" Margin="160,340,0,0" VerticalAlignment="Top" Width="81" Height="22"/>
+        <DataGrid x:Name="confirmationDataGrid" HorizontalAlignment="Left" Height="311" Margin="262,10,0,0" VerticalAlignment="Top" Width="376"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="262,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Department" HorizontalAlignment="Left" Margin="3,319,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="ID" HorizontalAlignment="Left" Margin="257,319,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="confirmationComboBox" HorizontalAlignment="Left" Margin="400,340,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Approved"/>
+            <ComboBoxItem Content="Disapproved"/>
+        </ComboBox>
+        <Label x:Name="label2" Content="Confirmation" HorizontalAlignment="Left" Margin="395,319,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateButton" Content="update data" Click="UpdateButton_Click" HorizontalAlignment="Left" Margin="540,341,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="refreshButton" Content="refresh data" Click="RefreshButton_Click" HorizontalAlignment="Left" Margin="540,380,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="262,380,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
