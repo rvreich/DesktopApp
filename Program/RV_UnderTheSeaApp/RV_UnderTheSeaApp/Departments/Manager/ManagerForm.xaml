@@ -25,10 +25,10 @@
         <Grid HorizontalAlignment="Left" Height="279" Margin="381,400,0,0" VerticalAlignment="Top" Width="582">
             <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
                 <lvc:CartesianChart.AxisX>
-                    <lvc:Axis Title="Amount" Labels="{Binding label}"></lvc:Axis>
+                    <lvc:Axis Title="Amount" Labels="{Binding Labels}"></lvc:Axis>
                 </lvc:CartesianChart.AxisX>
                 <lvc:CartesianChart.AxisY>
-                    <lvc:Axis Title="Department" LabelFormatter="{Binding Formatter}"></lvc:Axis>
+                    <lvc:Axis Title="Department" LabelFormatter="{Binding Labels}"></lvc:Axis>
                 </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
         </Grid>
