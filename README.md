@@ -19,8 +19,8 @@ TODO List
   - [x] Program Completion 20%
   - [x] Program Completion 40%
   - [x] Program Completion 60%
-  - [ ] Program Completion 80%
-  - [ ] Program Completion 100%
+  - [x] Program Completion 80%
+  - [x] Program Completion 100%
 - Design Pattern :
   - [x] Singleton - Database
   - [x] Template - Report
