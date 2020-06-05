@@ -3,6 +3,7 @@ using RV_UnderTheSeaApp.Departments.AttractionDepartment;
 using RV_UnderTheSeaApp.Departments.ConstructionDepartment;
 using RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision;
 using RV_UnderTheSeaApp.Departments.HotelDepartment.HouseKeepingDivision;
+using RV_UnderTheSeaApp.Departments.HumanResourceDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
 using RV_UnderTheSeaApp.Departments.PurchasingDepartment;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision;
@@ -134,6 +135,9 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "HURD":
+                    HumanResourceForm humanResourceForm = new HumanResourceForm();
+                    humanResourceForm.Show();
+                    this.Close();
                     break;
                 case "MANA":
                     break;

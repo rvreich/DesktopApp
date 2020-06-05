@@ -1,0 +1,57 @@
+﻿<Window x:Class="RV_UnderTheSeaApp.Departments.HumanResourceDepartment.HumanResourceForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.HumanResourceDepartment"
+        mc:Ignorable="d"
+        Title="HumanResourceForm" Height="750" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="workerDataGrid" HorizontalAlignment="Left" Height="271" Margin="10,10,0,0" VerticalAlignment="Top" Width="540"/>
+        <TextBox x:Name="requestBox" HorizontalAlignment="Left" Height="271" Margin="581,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="299" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+        <TextBox x:Name="username_box" HorizontalAlignment="Left" Height="23" Margin="10,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="password_box" HorizontalAlignment="Left" Height="24" Margin="10,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="workername_box" HorizontalAlignment="Left" Height="23" Margin="10,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="salary_box" HorizontalAlignment="Left" Height="23" Margin="161,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="5,281,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Password" HorizontalAlignment="Left" Margin="5,322,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Worker Name" HorizontalAlignment="Left" Margin="5,362,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Salary" HorizontalAlignment="Left" Margin="155,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="position_box" HorizontalAlignment="Left" Height="23" Margin="161,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label4" Content="Position" HorizontalAlignment="Left" Margin="155,322,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="performance_box" HorizontalAlignment="Left" Height="23" Margin="161,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label5" Content="Performance Index" HorizontalAlignment="Left" Margin="155,362,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="worker_id_box" HorizontalAlignment="Left" Height="23" Margin="320,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label6" Content="Worker ID" HorizontalAlignment="Left" Margin="314,281,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dobDatePicker" HorizontalAlignment="Left" Margin="320,340,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Worker DOB" HorizontalAlignment="Left" Margin="314,322,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="genderComboBox" HorizontalAlignment="Left" Margin="320,380,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="MALE"/>
+            <ComboBoxItem Content="FEMALE"/>
+        </ComboBox>
+        <Label x:Name="label8" Content="Gender" HorizontalAlignment="Left" Margin="314,361,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="insertWorkerButton" Content="insert data" Click="InsertWorkerButton_Click" HorizontalAlignment="Left" Margin="475,301,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateWorkerIndexButton" Content="update index" Click="UpdateWorkerIndexButton_Click" HorizontalAlignment="Left" Margin="475,340,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="deleteWorkerButton" Content="delete data" Click="DeleteWorkerButton_Click" HorizontalAlignment="Left" Margin="475,380,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="departmentComboBox" HorizontalAlignment="Left" Margin="581,302,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Manager"/>
+            <ComboBoxItem Content="Accounting Finance"/>
+        </ComboBox>
+        <Button x:Name="sendRequestButton" Content="send request" Click="SendRequestButton_Click" HorizontalAlignment="Left" Margin="721,302,0,0" VerticalAlignment="Top" Width="78" Height="23"/>
+        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="240" Margin="10,441,0,0" VerticalAlignment="Top" Width="310"/>
+        <Button x:Name="refreshReportButton" Content="refresh data" Click="RefreshReportButton_Click" HorizontalAlignment="Left" Margin="122,692,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="permitDataGrid" HorizontalAlignment="Left" Height="240" Margin="380,441,0,0" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="809,693,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="permit_id_box" HorizontalAlignment="Left" Height="23" Margin="660,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label9" Content="Permit ID" HorizontalAlignment="Left" Margin="655,441,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="permitStatusComboBox" HorizontalAlignment="Left" Margin="660,507,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Approved"/>
+            <ComboBoxItem Content="Disapproved"/>
+        </ComboBox>
+        <Label x:Name="label10" Content="Permit Status" HorizontalAlignment="Left" Margin="655,489,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updatePermitButton" Content="update permit" Click="UpdatePermitButton_Click" HorizontalAlignment="Left" Margin="660,541,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button x:Name="updateWorkerSalaryButton" Content="update salary" Click="UpdateWorkerSalaryButton_Click" HorizontalAlignment="Left" Margin="581,340,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="refreshPermitButton" Content="refresh permit" Click="RefreshPermitButton_Click" HorizontalAlignment="Left" Margin="475,692,0,0" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.307,0.281"/>
+    </Grid>
+</Window>

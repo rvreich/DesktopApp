@@ -90,7 +90,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Departments\HumanResourceDepartment\HumanResourceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Departments\Manager\ManagerForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,8 +163,14 @@
     <Compile Include="Departments\HotelDepartment\HouseKeepingDivision\HouseKeepingForm.xaml.cs">
       <DependentUpon>HouseKeepingForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Departments\HumanResourceDepartment\HumanResourceForm.xaml.cs">
+      <DependentUpon>HumanResourceForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Departments\MaintenanceDepartment\MaintenanceForm.xaml.cs">
       <DependentUpon>MaintenanceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Manager\ManagerForm.xaml.cs">
+      <DependentUpon>ManagerForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Departments\PurchasingDepartment\PurchasingForm.xaml.cs">
       <DependentUpon>PurchasingForm.xaml</DependentUpon>

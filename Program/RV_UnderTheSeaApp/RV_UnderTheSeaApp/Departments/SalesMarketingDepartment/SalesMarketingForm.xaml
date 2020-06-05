@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.SalesMarketingDepartment"
         mc:Ignorable="d"
-        Title="SalesMarketingForm" Height="450" Width="800">
+        Title="SalesMarketingForm" Height="450" Width="1400"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <TextBox x:Name="report_box" HorizontalAlignment="Left" Height="289" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <ComboBox x:Name="departmentComboBox" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Purchase" />
+            <ComboBoxItem Content="Accounting Finance" />
+        </ComboBox>
+        <TextBox x:Name="ads_box" HorizontalAlignment="Left" Height="289" Margin="281,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <DataGrid x:Name="adsDataGrid" HorizontalAlignment="Left" Height="289" Margin="560,10,0,0" VerticalAlignment="Top" Width="424"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="679,381,0,0" VerticalAlignment="Top" Width="79"/>
+        <Button x:Name="sendRequestButton" Content="send request" Click="SendRequestButton_Click" HorizontalAlignment="Left" Margin="81,360,0,0" VerticalAlignment="Top" Width="79"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="281,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.668,0.383"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="275,299,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="insertAdsButton" Content="insert ads" Click="InsertAdsButton_Click" HorizontalAlignment="Left" Margin="436,322,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateAdsButton" Content="update ads" Click="UpdateAdsButton_Click" HorizontalAlignment="Left" Margin="436,346,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="deleteAdsButton" Content="delete ads" Click="DeleteAdsButton_Click" HorizontalAlignment="Left" Margin="436,370,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="289" Margin="1019,10,0,0" VerticalAlignment="Top" Width="365"/>
+        <Button x:Name="refreshReportButton" Content="refresh data" Click="RefreshReportButton_Click" HorizontalAlignment="Left" Margin="1161,319,0,0" VerticalAlignment="Top" Width="78"/>
     </Grid>
 </Window>
