@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RV_UnderTheSeaApp.Departments.Manager"
         mc:Ignorable="d"
-        Title="ManagerForm" Height="450" Width="800">
+        Title="ManagerForm" Height="750" Width="1000"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <DataGrid x:Name="workerDataGrid" HorizontalAlignment="Left" Height="313" Margin="10,10,0,0" VerticalAlignment="Top" Width="330"/>
+        <Button x:Name="refreshWorkerButton" Content="refresh data" Click="RefreshWorkerButton_Click" HorizontalAlignment="Left" Margin="121,340,0,0" VerticalAlignment="Top" Width="79"/>
+        <DataGrid x:Name="reportDataGrid" HorizontalAlignment="Left" Height="313" Margin="381,10,0,0" VerticalAlignment="Top" Width="582"/>
+        <TextBox x:Name="id_box" HorizontalAlignment="Left" Height="23" Margin="381,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="ID" HorizontalAlignment="Left" Margin="381,334,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="approvalComboBox" HorizontalAlignment="Left" Margin="561,360,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Approved"/>
+            <ComboBoxItem Content="Disapproved"/>
+        </ComboBox>
+        <Label x:Name="label1" Content="Approval Status" HorizontalAlignment="Left" Margin="561,334,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updateDataButton" Content="update status" Click="UpdateDataButton_Click" HorizontalAlignment="Left" Margin="742,360,0,0" VerticalAlignment="Top" Width="77" Height="22"/>
+        <Button x:Name="logoutButton" Content="log out" Click="LogoutButton_Click" HorizontalAlignment="Left" Margin="444,691,0,0" VerticalAlignment="Top" Width="75"/>
         
     </Grid>
 </Window>

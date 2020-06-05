@@ -5,11 +5,13 @@ using RV_UnderTheSeaApp.Departments.HotelDepartment.FrontOfficeDivision;
 using RV_UnderTheSeaApp.Departments.HotelDepartment.HouseKeepingDivision;
 using RV_UnderTheSeaApp.Departments.HumanResourceDepartment;
 using RV_UnderTheSeaApp.Departments.MaintenanceDepartment;
+using RV_UnderTheSeaApp.Departments.Manager;
 using RV_UnderTheSeaApp.Departments.PurchasingDepartment;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.DiningRoomDivision;
 using RV_UnderTheSeaApp.Departments.RestaurantDepartment.KitchenDivision;
 using RV_UnderTheSeaApp.Departments.RideAttractionCreativeDepartment;
 using RV_UnderTheSeaApp.Departments.SalesMarketingDepartment;
+using RV_UnderTheSeaApp.Entries;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -52,7 +54,7 @@ namespace RV_UnderTheSeaApp
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM Workers WHERE WORKERUSERNAME = '" + username + "' AND WORKERPASSWORD = '" + password + "'";
+            cmd.CommandText = "SELECT * FROM Workers WHERE WORKERUSERNAME = '" + username + "' AND WORKERPASSWORD = '" + password + "' AND ACTIVEWORKER = 1";
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
@@ -140,11 +142,92 @@ namespace RV_UnderTheSeaApp
                     this.Close();
                     break;
                 case "MANA":
+                    ManagerForm managerForm = new ManagerForm();
+                    managerForm.Show();
+                    this.Close();
                     break;
                 default:
                     MessageBox.Show("ERROR: UNKNOWN POSITION DETECTED");
                     break;
             }
+        }
+
+        private void ViewPermitButton_Click(object sender, RoutedEventArgs e)
+        {
+            String id = "";
+            String username = username_box.Text.ToString().Trim();
+            String password = password_box.Text.ToString().Trim();
+            String position = "";
+
+            SqlConnection con = db.getConnection();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Workers WHERE WORKERUSERNAME = '" + username + "' AND WORKERPASSWORD = '" + password + "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id = reader[0].ToString();
+                    position = reader[7].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username / Password");
+                username_box.Text = "";
+                password_box.Text = "";
+            }
+            con.Close();
+            if (position.CompareTo("") != 0)
+            {
+                PermitForm permitForm = new PermitForm(id);
+                permitForm.Show();
+            }
+        }
+
+        private void SendResignButton_Click(object sender, RoutedEventArgs e)
+        {
+            String id = "";
+            String username = username_box.Text.ToString().Trim();
+            String password = password_box.Text.ToString().Trim();
+            String position = "";
+
+            SqlConnection con = db.getConnection();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM Workers WHERE WORKERUSERNAME = '" + username + "' AND WORKERPASSWORD = '" + password + "' AND ACTIVEWORKER = 1";
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id = reader[0].ToString();
+                    position = reader[7].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username / Password");
+                username_box.Text = "";
+                password_box.Text = "";
+            }
+            reader.Close();
+            if (position.CompareTo("") != 0)
+            {
+                cmd.CommandText = "UPDATE Workers SET WANTSRESIGN = 1 WHERE ID = " + id;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Resignation Letter has been sent!");
+            }
+            con.Close();
         }
     }
 }

@@ -13,6 +13,8 @@
         <Label x:Name="label" Content="username" HorizontalAlignment="Left" Margin="62,119,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="password" HorizontalAlignment="Left" Margin="62,181,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Click="LoginClick" Content="LOGIN" HorizontalAlignment="Left" Margin="92,250,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="viewPermitButton" Content="View Permit" Click="ViewPermitButton_Click" HorizontalAlignment="Left" Margin="92,285,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="sendResignButton" Content="send resign" Click="SendResignButton_Click" HorizontalAlignment="Left" Margin="92,321,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
