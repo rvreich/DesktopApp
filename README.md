@@ -23,6 +23,6 @@ TODO List
   - [x] Program Completion 100%
 - Design Pattern :
   - [x] Singleton - Database
-  - [x] Template - Report
+  - [x] Private Class Data - Data Visualization Report
   - [x] Facade - Working Flow System
   - [x] State - Cooking State
