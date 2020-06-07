@@ -104,7 +104,7 @@ namespace RV_UnderTheSeaApp.Departments.ConstructionDepartment
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO ConfirmationReports (DATE, DEPARTMENT, CONTENT, APPROVED, RECEIVER) VALUES(@date, @dept, @cont, @appr, @rece)";
+                cmd.CommandText = "INSERT INTO ConfirmationReports (REPORTDATE, DEPARTMENT, CONTENT, APPROVED, RECEIVER) VALUES(@date, @dept, @cont, @appr, @rece)";
                 cmd.Parameters.AddWithValue("@date", System.DateTime.Now);
                 cmd.Parameters.AddWithValue("@dept", "CONS");
                 cmd.Parameters.AddWithValue("@cont", content);

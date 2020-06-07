@@ -102,6 +102,7 @@ namespace RV_UnderTheSeaApp.Departments.PurchasingDepartment
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "UPDATE ConfirmationReports SET APPROVED = " + conf + " WHERE ID = " + id;
                 con.Close();
+                MessageBox.Show("Done");
             }
             id_box.Text = "";
             RefreshRequestData();
